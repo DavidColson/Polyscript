@@ -1,3 +1,4 @@
+project(bgfx)
 
 # Core BGFX lib
 # ----------------------
