@@ -14,20 +14,7 @@ target_include_directories(bimg PUBLIC
 	"3rdparty/astc-codec/include"
 	"3rdparty/astc-codec")
 
-# Build system specific configurations
-if( MSVC )
-	target_include_directories( bimg
-		PUBLIC
-			"../bx/include/compat/msvc")
-elseif( MINGW )
-	target_include_directories( bimg
-		PUBLIC
-		    "../bx/include/compat/mingw")
-elseif( APPLE )
-	target_include_directories( bimg
-		PUBLIC
-		    "../bx/include/compat/osx")
-endif()
+BGFXCompat(bimg)
 
 target_compile_definitions(bimg PUBLIC _HAS_EXCEPTIONS=0 _CRT_SECURE_NO_WARNINGS)
 
@@ -42,19 +29,6 @@ target_include_directories(bimg_decode PUBLIC
 	"include"
 	"3rdparty")
 
-# Build system specific configurations
-if( MSVC )
-	target_include_directories( bimg_decode
-		PUBLIC
-			"../bx/include/compat/msvc")
-elseif( MINGW )
-	target_include_directories( bimg_decode
-		PUBLIC
-		    "../bx/include/compat/mingw")
-elseif( APPLE )
-	target_include_directories( bimg_decode
-		PUBLIC
-		    "../bx/include/compat/osx")
-endif()
+BGFXCompat(bimg_decode)
 
 target_compile_definitions(bimg_decode PUBLIC _HAS_EXCEPTIONS=0 _CRT_SECURE_NO_WARNINGS)

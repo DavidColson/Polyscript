@@ -21,6 +21,6 @@ target_include_directories(imgui PUBLIC
     "/"
     "../bgfx/include/"
     "../bimg/include/"
-    "../../lib/SDL2-2.0.8/include"
+    "../SDL2/include"
     "../bx/include")
 

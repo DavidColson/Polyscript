@@ -21,9 +21,16 @@ Stripped out build scripts and github files
 
 Stripped out tests and catch dependency, all build scripts and github files leaving just the code required to run and the license
 
-## ImGui
+## imgui
 
-- Source: https://github.com/ocornut/imgui
-- Version: 1.89.9
+- source: https://github.com/ocornut/imgui
+- version: 1.89.9
 
-Removed backends we don't need, added the bgfx backent and then removed the examples folder, but otherwise same as upstream
+removed backends we don't need, added the bgfx backent and then removed the examples folder, but otherwise same as upstream
+
+## SDL2
+
+- source: https://github.com/libsdl-org/SDL
+- version: 2.0.8
+
+Just the windows libs and headers
